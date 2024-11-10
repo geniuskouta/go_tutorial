@@ -9,7 +9,7 @@ import (
 func main() {
 	log.SetPrefix("greetings: ") // print the command name ("greetings: ")
 	log.SetFlags(0)              //  at the start of its log messages, without a time stamp or source file information.
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("Kouta")
 
 	if err != nil {
 		log.Fatal(err) // print the error and stop the program
