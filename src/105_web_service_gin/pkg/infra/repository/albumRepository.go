@@ -1,4 +1,4 @@
-package albumRepository
+package repository
 
 import "tutorial_105/pkg/domain/entity"
 

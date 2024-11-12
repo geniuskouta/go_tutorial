@@ -1,18 +1,18 @@
-package albumHandler
+package handler
 
 import (
 	"net/http"
 	"tutorial_105/pkg/domain/entity"
-	"tutorial_105/pkg/infra/repository/albumRepository"
+	"tutorial_105/pkg/infra/repository"
 
 	"github.com/gin-gonic/gin"
 )
 
 type AlbumHandler struct {
-	repo albumRepository.AlbumRepository
+	repo repository.AlbumRepository
 }
 
-func NewAlbumHandler(repo albumRepository.AlbumRepository) *AlbumHandler {
+func NewAlbumHandler(repo repository.AlbumRepository) *AlbumHandler {
 	return &AlbumHandler{repo: repo}
 }
 
