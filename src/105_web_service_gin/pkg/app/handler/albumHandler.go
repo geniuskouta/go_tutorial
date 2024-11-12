@@ -35,3 +35,14 @@ func (h *AlbumHandler) PostAlbums(c *gin.Context) {
 	}
 	c.IndentedJSON(http.StatusCreated, newAlbum)
 }
+
+func (h *AlbumHandler) GetAlbumById(c *gin.Context) {
+	id := c.Param("id")
+	album, err := h.repo.GetById(id)
+
+	if err != nil {
+		c.IndentedJSON(http.StatusNotFound, gin.H{"message": err.Error()})
+		return
+	}
+	c.IndentedJSON(http.StatusOK, album)
+}

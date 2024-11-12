@@ -1,10 +1,14 @@
 package repository
 
-import "tutorial_105/pkg/domain/entity"
+import (
+	"fmt"
+	"tutorial_105/pkg/domain/entity"
+)
 
 type AlbumRepository interface {
 	FindAll() []entity.Album
 	Create(album entity.Album) error
+	GetById(id string) (*entity.Album, error)
 }
 
 type InMemoryAlbumRepository struct {
@@ -28,4 +32,13 @@ func (r *InMemoryAlbumRepository) FindAll() []entity.Album {
 func (r *InMemoryAlbumRepository) Create(album entity.Album) error {
 	r.albums = append(r.albums, album)
 	return nil
+}
+
+func (r *InMemoryAlbumRepository) GetById(id string) (*entity.Album, error) {
+	for _, a := range r.albums {
+		if a.ID == id {
+			return &a, nil
+		}
+	}
+	return nil, fmt.Errorf("album with ID %s not found", id)
 }
