@@ -1,8 +1,8 @@
 package main
 
 import (
-	"tutorial_105/pkg/app/handler"
-	"tutorial_105/pkg/infra/repository"
+	"tutorial_105/internal/app/handler"
+	"tutorial_105/internal/infra/repository"
 
 	"github.com/gin-gonic/gin"
 )

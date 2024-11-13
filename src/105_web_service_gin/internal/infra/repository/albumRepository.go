@@ -2,7 +2,7 @@ package repository
 
 import (
 	"fmt"
-	"tutorial_105/pkg/domain/entity"
+	"tutorial_105/internal/domain/entity"
 )
 
 type AlbumRepository interface {

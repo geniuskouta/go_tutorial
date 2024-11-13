@@ -2,8 +2,8 @@ package handler
 
 import (
 	"net/http"
-	"tutorial_105/pkg/domain/entity"
-	"tutorial_105/pkg/infra/repository"
+	"tutorial_105/internal/domain/entity"
+	"tutorial_105/internal/infra/repository"
 
 	"github.com/gin-gonic/gin"
 )
