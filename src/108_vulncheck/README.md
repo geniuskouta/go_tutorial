@@ -1,0 +1,4 @@
+## check vulnerability
+```
+govulncheck ./...
+```
